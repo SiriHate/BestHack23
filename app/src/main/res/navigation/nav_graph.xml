@@ -6,20 +6,20 @@
     app:startDestination="@id/welcomeFragment">
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.siri_hate.besthack23.WelcomeFragment"
+        android:name="com.siri_hate.besthack23.view.fragments.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
-            android:id="@+id/action_welcomeFragment_to_resultFragment2"
+            android:id="@+id/action_welcomeFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.siri_hate.besthack23.ResultFragment"
+        android:name="com.siri_hate.besthack23.view.fragments.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" >
         <action
-            android:id="@+id/action_resultFragment_to_welcomeFragment2"
+            android:id="@+id/action_resultFragment_to_welcomeFragment"
             app:destination="@id/welcomeFragment" />
     </fragment>
 </navigation>
