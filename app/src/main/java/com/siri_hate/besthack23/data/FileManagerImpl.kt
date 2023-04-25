@@ -28,6 +28,7 @@ class FileManagerImpl @Inject constructor(private val context: Context) : FileMa
         return "" //todo wrap in status(success/error) class
     }
 
+
     override fun getFileContent(uri: Uri?): String {
         try {
             val inputStream = context.contentResolver.openInputStream(uri!!)
@@ -39,6 +40,7 @@ class FileManagerImpl @Inject constructor(private val context: Context) : FileMa
             }
             inputStream?.close()
             reader.close()
+            println(stringBuilder.toString())
             return stringBuilder.toString()
         } catch (e: IOException) {
             e.printStackTrace()

@@ -59,9 +59,17 @@
 
         <TextView
             android:id="@+id/result_item_list_word_find_num_value"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="5 раз" />
+
+        <TextView
+            android:id="@+id/result_item_list_word_root_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="корень" />
     </LinearLayout>
 
 </LinearLayout>

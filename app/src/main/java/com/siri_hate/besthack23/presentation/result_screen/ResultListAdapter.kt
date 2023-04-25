@@ -27,6 +27,7 @@ class ResultListAdapter(
         holder.lettersNumTextView.text = numLettersString
         val findNumString = context.getString(R.string.word_find_num, result[position].entries)
         holder.wordFindNumTextView.text = findNumString
+        holder.wordRootTextView.text = result[position].root
     }
 
     override fun getItemCount() = result.size
@@ -35,5 +36,6 @@ class ResultListAdapter(
         val wordTextView: TextView = itemView.findViewById(R.id.result_item_word_value)
         val lettersNumTextView: TextView = itemView.findViewById(R.id.result_item_list_letters_num_value)
         val wordFindNumTextView: TextView = itemView.findViewById(R.id.result_item_list_word_find_num_value)
+        val wordRootTextView: TextView = itemView.findViewById(R.id.result_item_list_word_root_value)
     }
 }
