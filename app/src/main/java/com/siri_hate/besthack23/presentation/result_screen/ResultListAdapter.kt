@@ -1,4 +1,4 @@
-package com.siri_hate.besthack23.view.adapters
+package com.siri_hate.besthack23.presentation.result_screen
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,9 +7,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.siri_hate.besthack23.R
+import com.siri_hate.besthack23.domain.model.AnalyzedWord
 
 class ResultListAdapter(
-    private val result: List<Triple<String, Int, Int>>,
+    private val result: List<AnalyzedWord>,
     private val context: Context
     ) :
     RecyclerView.Adapter<ResultListAdapter.ViewHolder>() {
@@ -21,11 +22,10 @@ class ResultListAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val (word, wordLength, count) = result[position]
-        holder.wordTextView.text = word
-        val numLettersString = context.getString(R.string.word_length, wordLength)
+        holder.wordTextView.text = result[position].word
+        val numLettersString = context.getString(R.string.word_length, result[position].length)
         holder.lettersNumTextView.text = numLettersString
-        val findNumString = context.getString(R.string.word_find_num, count)
+        val findNumString = context.getString(R.string.word_find_num, result[position].entries)
         holder.wordFindNumTextView.text = findNumString
     }
 

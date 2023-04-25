@@ -6,7 +6,7 @@
     app:startDestination="@id/welcomeFragment">
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.siri_hate.besthack23.view.fragments.WelcomeFragment"
+        android:name="com.siri_hate.besthack23.presentation.welcome_screen.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.siri_hate.besthack23.view.fragments.ResultFragment"
+        android:name="com.siri_hate.besthack23.presentation.result_screen.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" >
         <action
