@@ -82,7 +82,11 @@ class WelcomeFragment : Fragment() {
     private fun collectFileNameFlow() = lifecycleScope.launchWhenStarted {
         viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
             viewModel.fileName.collectLatest {
-                filenameTextView.text = it
+                if (it.isNullOrEmpty()){
+                    filenameTextView.text = "Не выбрано"
+                } else {
+                    filenameTextView.text = it
+                }
             }
         }
     }

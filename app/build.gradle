@@ -66,4 +66,19 @@ dependencies {
     implementation "com.google.dagger:hilt-android:2.45"
     kapt "com.google.dagger:hilt-compiler:2.45"
 
+//    //NLP
+//    implementation ('edu.stanford.nlp:stanford-corenlp:4.4.0') {
+//       // exclude group: 'com.sun.xml.bind', module: 'jaxb-core'
+//    }
+
+//    //epub
+//    implementation 'com.github.mertakdut:EpubParser:1.0.95'
+//    implementation('nl.siegmann.epublib:epublib-core:4.0') {
+//        exclude group: 'org.slf4j'
+//        exclude group: 'xmlpull'
+//    }
+//    implementation 'org.slf4j:slf4j-android:1.7.25'
+
+
+
 }
